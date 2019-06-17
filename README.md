@@ -3,6 +3,12 @@ Nagios Library to monitor VMware NSX Devices
 
 Usage: /usr/bin/php NSXMon.php -H "<hostname>"  -f "/path/to/authfile.cfg" -m "<monitor>" -a "<action>" -c "<critical>" -C "<criticalCount>" -O "<objectId>" -s "<scanrange>" -n "<true, false>"
      
+NagiosXI Command 
+Name: NSXMon
+
+/usr/bin/php -q $USER1$/NSXMon.php -H "$HOSTADDRESS$" -f "$ARG1$" -m "$ARG2$" -a "$ARG3$" -c "$ARG4$" -C "$ARG5$" -O "$ARG6$" -s "$ARG7$" -n "$ARG8$"
+
+     
      SYSTEM
      -m | --monitor (system)
      -a | --action system(uptime, version, cpu-usage, cpu-count, cpu-cap, mem-usage, mem-total, storage-usage, storage-total)
