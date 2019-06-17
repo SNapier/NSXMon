@@ -1,13 +1,19 @@
 # NSXMon
 Nagios Library to monitor VMware NSX Devices
 
+# Command Line
 Usage: /usr/bin/php NSXMon.php -H "<hostname>"  -f "/path/to/authfile.cfg" -m "<monitor>" -a "<action>" -c "<critical>" -C "<criticalCount>" -O "<objectId>" -s "<scanrange>" -n "<true, false>"
-     
-NagiosXI Command 
+
+# NagiosXI Command 
 Name: NSXMon
 
 /usr/bin/php -q $USER1$/NSXMon.php -H "$HOSTADDRESS$" -f "$ARG1$" -m "$ARG2$" -a "$ARG3$" -c "$ARG4$" -C "$ARG5$" -O "$ARG6$" -s "$ARG7$" -n "$ARG8$"
 
+# Auth File
+1. pass the full path to the file in $ARG1 of the check command.
+2. See auth-file-example,cfg for content and format requirements
+
+# NSXMon Check Options
      
      SYSTEM
      -m | --monitor (system)
@@ -45,3 +51,6 @@ Name: NSXMon
      -a | --action snmp(list-all, list-enabled, trap-info)
      -c | --critcal
 
+# VMware Setup
+1. Create Read-Only user via the API with full permissions to the API.
+2. Use this username and password in the auth file.
