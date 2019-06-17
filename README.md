@@ -54,12 +54,15 @@ Name: NSXMon
 # Service Check Examples
 
 SHOW-CRITICAL-SYSTEM-EVENTS
+
 /usr/bin/php -q NSXMon.php -H "yourhostname" -f "/usr/local/nagios/libexec/nsxmgrauthfile.cfg" -m "system-event" -a "show-crit" -c "1" -w "0" -n "" -x "0"
 
 SHOW-RESOLVABLE-SYSTEM-EVENTS
+
 /usr/bin/php -q NSXMon.php -H "yourhostname" -f "/usr/local/nagios/libexec/nsxmgrauthfile.cfg" -m "system-alarm" -a "show-resolvable" -c "" -C "5" -O "" -s "" -n ""
 
 MEM-USAGE (CRITICAL > 95%)
+
 /usr/bin/php -q NSXMon.php -H "yourhostname" -f "/usr/local/nagios/libexec/nsxmgrauthfile.cfg" -m "system" -a "mem-usage" -c "95" -C "" -O "" -s "" -n ""
 
 
