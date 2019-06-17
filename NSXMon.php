@@ -1,6 +1,14 @@
 #!/usr/bin/php
 <?php
 
+/* 
+ * NSXmon.php
+ * Nagios/NagiosXI Plugin to monitor VMware NSXManager via the VMwareAPI.
+ * Created by: Sam Napier
+ *
+*/
+
+
 define("PROGRAM", 'NSXMon.php');
 define("VERSION", '0.1.0');
 define("STATUS_OK", 0);
